@@ -1,0 +1,10 @@
+ struct node{
+    int data;
+    struct node * next;
+}
+
+struct node *BuildOneTwoThree(){
+    struct node * head=NULL;
+    struct node * second=NULL;
+    struct node * third=NULL;   
+}
