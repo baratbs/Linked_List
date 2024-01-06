@@ -1,10 +1,30 @@
- struct node{
-    int data;
-    struct node * next;
-}
+*********************************************************************************************************
+Program to maintain a linked list
+*********************************************************************************************************
 
-struct node *BuildOneTwoThree(){
-    struct node * head=NULL;
-    struct node * second=NULL;
-    struct node * third=NULL;   
-}
+
+struct node{
+int data;
+struct node *link;
+};
+
+main()
+{
+struct node *p;
+p=NULL;
+
+printf("no.of elements ina linked list=%d\n",count(p));
+
+append(&p,1);
+append(&p,2);
+append(&p,3);
+append(&p,4);
+append(&p,17);
+
+clrscr();
+display(p);
+
+
+
+
+
