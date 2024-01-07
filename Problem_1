@@ -25,6 +25,29 @@ clrscr();
 display(p);
 
 
+ppend(struct **q,int num){
+    struct node *temp,*r;
+    temp=*q;
+
+    if(*q==NULL) //if the list is empty create a first node
+    {
+        temp=malloc(sizeof(struct node));
+        temp->data=num;
+        temp->link=NULL;
+        *q=temp;
+    }
+    else{
+        temp=*q;
+
+        //go to last node
+        while(temp->link!=NULL)
+            temp=temp->link;
+
+            //add node at the end
+    
+    }
+
+
 
 
 
