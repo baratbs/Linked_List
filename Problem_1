@@ -4,49 +4,47 @@ Program to maintain a linked list
 
 
 struct node{
-int data;
-struct node *link;
+    int data;
+    struct node * link;
 };
 
-main()
-{
-struct node *p;
-p=NULL;
+int main(){
+    struct node *p;
+    p=NULL;
 
-printf("no.of elements ina linked list=%d\n",count(p));
+    printf("\n No.of elements in the linked list=%d",count(p));
 
-append(&p,1);
-append(&p,2);
-append(&p,3);
-append(&p,4);
-append(&p,17);
+    append(&p,1);
 
-clrscr();
-display(p);
+    append(struct node **q; int num){
+        struct node *temp,*r;
 
+        temp=q;
 
-ppend(struct **q,int num){
-    struct node *temp,*r;
-    temp=*q;
+        if(*q==NULL){
+            temp=malloc(sizeof(struct node));
+            temp->data=num;
+            temp->link=NULL;
+            *q=temp;
+        }
+        else{
+            temp=*q;
 
-    if(*q==NULL) //if the list is empty create a first node
-    {
-        temp=malloc(sizeof(struct node));
-        temp->data=num;
-        temp->link=NULL;
-        *q=temp;
+            //go to last node
+
+            while(temp->link!=NULL)
+                temp=temp->link;
+
+                //add node at the end
+
+                r=malloc(sizeof(struct node));
+                r->data=num;
+                r->link=NULL;
+                temp->linl=r;
+
+        }
     }
-    else{
-        temp=*q;
-
-        //go to last node
-        while(temp->link!=NULL)
-            temp=temp->link;
-
-            //add node at the end
-    
-    }
-
+}
 
 
 
